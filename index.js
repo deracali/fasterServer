@@ -18,6 +18,7 @@ mongoose
 // Schema
 const sch = {
     number:String,
+    senderName: String, 
     location:String,
     packages:String,
     address:String,
@@ -62,6 +63,7 @@ app.post("/post",async(req,res)=>{
     const data = new monmodel({
         number:req.body.number,
         location:req.body.location,
+        senderName: req.body.senderName,
         address:req.body.address,
         checkpoint1:req.body.checkpoint1,
         checkpoint2:req.body.checkpoint2,
